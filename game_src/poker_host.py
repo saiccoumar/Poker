@@ -4,8 +4,7 @@ sys.path.append("../")
 
 from deck import *
 from collections import Counter
-import numpy as np
-import json
+
 
 flag = False
 def cprint(str):
