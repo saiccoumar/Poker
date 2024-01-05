@@ -28,11 +28,17 @@ poker_simulations.py uses a rudimentary ruleset of the game to generate simulate
 ***determine_winner()***, and it's helper method ***rank_hand()***, is the bread and butter of this program. determine_winner() evaluates the 2 cards each player + 5 community cards and then sorts them by their rank. It then returns the index of the hand that won. rank_hand() takes 7 cards, and then returns the rank of the best combination of 5 cards that can be made with those 5 cards. 
 
 In poker there are 10 ranks, with the Royal flush being the highest (rank 10) and the high card being the lowest (rank 1). It also returns the value of the highest card, because if two hands have the same rank, the player with the higher card value wins. rank_hand() was tested extensively in tests.py, and I recommend checking the logic yourself if you're interested.
+<p align="center">
+  <img width="60%" height="auto" src="https://github.com/saiccoumar/Poker/assets/55699636/c83703ac-860c-4b66-bef3-3676b0e92ac9">
+</p>
+<p align="center">
+  <em> https://www.poker.org </em>
+</p>
+Also note that this is not the most efficient implementation of rank_hand(). In my research I found that bit-wise evaluations of hands were far more efficient for large scale poker applications on servers. For statistical analysis and local games with AI agents the performance benefit was negligble, and my implementation is more interpretable.     <br />
 
-Also note that this is not the most efficient implementation of rank_hand(). In my research I found that bit-wise evaluations of hands were far more efficient for large scale poker applications on servers. For statistical analysis and local games with AI agents the performance benefit was negligble, and my implementation is more interpretable.  
-
-There is no betting feature in poker_simulations.py - the code simply deals cards and checks which hands would win by their rank, and then exports that data to files. It also isn't very user friendly. There is a num_rounds variable which you can play with in the simulate() function, but I didn't opt to spend the time making it a Command Line Argument parameter.
-
-You can also vary the range of players that the games will simulate. I used the range [2,8] but you can increase that upper limit up to 23 (it won't work well past 8 though).
+In the code, you can vary num_rounds and num_players to get the simulated data you desire.  
 
 There is also a function, ***draw_probabilities()*** which calculates the probabilities of having a hand of a rank with 2 random cards (an opponents cards) given the community cards available. This was made in advance because such probabilities will be more useful when implementing the AI agents, but it was easier to test this here and collect data about frequencies of hands. 
+![evaluator_test](https://github.com/saiccoumar/Poker/assets/55699636/f3cd1263-12ea-4cc0-8f55-86751488ad87)
+
+
