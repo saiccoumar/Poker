@@ -41,4 +41,14 @@ In the code, you can vary num_rounds and num_players to get the simulated data y
 There is also a function, ***draw_probabilities()*** which calculates the probabilities of having a hand of a rank with 2 random cards (an opponents cards) given the community cards available. This was made in advance because such probabilities will be more useful when implementing the AI agents, but it was easier to test this here and collect data about frequencies of hands. 
 ![evaluator_test](https://github.com/saiccoumar/Poker/assets/55699636/f3cd1263-12ea-4cc0-8f55-86751488ad87)
 
+## Poker Game
+### Poker Host
+### Client
+### Server
+
+## Important Technical Elements
+### Threading
+### Game State
+### Object-Oriented Programming
+
 
