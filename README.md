@@ -1,4 +1,4 @@
 # Poker ♡ ♣ ♢ ♠
 <p align="center">
- <img size="100%" src="https://github.com/saiccoumar/Poker/assets/55699636/5760ad12-7e98-41d6-a529-277dae292ec4">
+ <img size="100%" src="https://github.com/saiccoumar/Poker/assets/55699636/e0613b16-97a4-43d3-970c-a5d1f1a20f35">
 </p>
