@@ -27,6 +27,7 @@ class Server:
         self.players = {}
         # Game imported from poker_host
         self.game = TexasHoldem(num_players)
+        self.num_players = num_players
         self.num_players_connected = 0
         self.lock = threading.Lock()
         self.dealer_check_event = threading.Event()
@@ -404,7 +405,7 @@ class Server:
 
     def accept_connections(self):
         # Repeatedly check for clients that will join
-        while self.players_connected:
+        while self.players_connected and self.num_players_connected < self.num_players:
             client_socket, addr = self.server_socket.accept()
             print(f"Connection from {addr} has been established.")
             # Add clients to players array for reference later

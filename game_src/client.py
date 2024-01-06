@@ -1,5 +1,7 @@
 # client.py
-
+import sys
+# Import deck from parent directory
+sys.path.append("../")
 import socket
 import json
 from poker_host import Player
@@ -77,6 +79,7 @@ class Client:
                 
             # If the data is the cards make bets
             elif isinstance(game_state, dict):
+                self.player.chips = game_state['chips'][str(self.player_number)]
                 # print(f"Round: {game_state['round']}")
                 if (game_state['round'] == 'Showdown!'):
                     self.print_showdown_cards(game_state)
