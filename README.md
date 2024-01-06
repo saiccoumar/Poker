@@ -21,9 +21,9 @@ python poker_simulations.py
 ```
 poker_simulations.py uses a rudimentary ruleset of the game to generate simulated data of poker. I created the class TexasHoldEm, which has a deck, community cards, and the hands of each players. It also has the functionality to deal community cards and hole cards. This class has many methods, many of which are for recording data and managing the game, but there are two in particular to take note of.
 
-***play_round()*** simulates a single round of poker. It resets the cards in the deck, shuffles them, and then deals 2 to each player and 5 onto the community cards; This effectively skips to the showdown round. To see who would win with the cards available we use the next notable function.
+***play_round()*** simulates a single round of poker. It resets the cards in the deck, shuffles them, and then deals 2 to each player and 5 onto the community cards; This effectively skips to the showdown round. 
 
-***determine_winner()***, and it's helper method ***rank_hand()***, is the bread and butter of this program. determine_winner() evaluates the 2 cards each player + 5 community cards and then sorts them by their rank. It then returns the index of the hand that won. rank_hand() takes 7 cards, and then returns the rank of the best combination of 5 cards that can be made with those 5 cards. 
+***determine_winner()***, and it's helper method ***rank_hand()***, is the bread and butter of this program. determine_winner() evaluates the 2 cards each player + 5 community cards and then sorts them by their rank. It then returns the index of the hand that won. ***rank_hand()*** takes 7 cards, and then returns the rank of the best combination of 5 cards that can be made with those 5 cards. 
 
 In poker there are 10 ranks, with the Royal flush being the highest (rank 10) and the high card being the lowest (rank 1). It also returns the value of the highest card, because if two hands have the same rank, the player with the higher card value wins. rank_hand() was tested extensively in tests.py, and I recommend checking the logic yourself if you're interested.
 <p align="center">
@@ -31,12 +31,14 @@ In poker there are 10 ranks, with the Royal flush being the highest (rank 10) an
 </p>
 <p align="center">
   <em> https://www.poker.org </em>
+ <em> I ranked mine with 1 as the lowest and 10 as the highest. This graphic reverses that.</em>
 </p>
-Also note that this is not the most efficient implementation of rank_hand(). In my research I found that bit-wise evaluations of hands were far more efficient for large scale poker applications on servers. For statistical analysis and local games with AI agents the performance benefit was negligble, and my implementation is more interpretable.     <br />
+Also note that this is not the most efficient implementation of rank_hand(). In my research I found that bit-wise evaluations of hands were far more efficient for large scale poker applications on servers. 
+   <br />
 
 In the code, you can vary num_rounds and num_players to get the simulated data you desire.  
 
-There is also a function, ***draw_probabilities()*** which calculates the probabilities of having a hand of a rank with 2 random cards (an opponents cards) given the community cards available. This was made in advance because such probabilities will be more useful when implementing the AI agents, but it was easier to test this here and collect data about frequencies of hands. 
+There is also a function, ***draw_probabilities()*** which calculates the probabilities of having a hand of a rank with 2 random cards (an opponents cards) given the community cards available. This was made in advance because such probabilities will be more useful when implementing the AI agents.. 
 ![evaluator_test](https://github.com/saiccoumar/Poker/assets/55699636/f3cd1263-12ea-4cc0-8f55-86751488ad87)
 
 ## Poker Game
