@@ -41,6 +41,9 @@ In the code, you can vary num_rounds and num_players to get the simulated data y
 There is also a function, ***draw_probabilities()*** which calculates the probabilities of having a hand of a rank with 2 random cards (an opponents cards) given the community cards available. This was made in advance because such probabilities will be more useful when implementing the AI agents.. 
 ![evaluator_test](https://github.com/saiccoumar/Poker/assets/55699636/f3cd1263-12ea-4cc0-8f55-86751488ad87)
 
+## Poker Analysis (ipynb)
+poker_analyis.ipynb contains all my statistical analyses of the data collected from poker_simulations.py. I generated various plots and calculated metrics regarding poker which will be featured on my medium page. 
+
 ## Poker Game
 The poker game has 3 subcomponents.
 ### Poker Host
@@ -97,4 +100,14 @@ OOP design principles ensure that the code is extremely easy to follow and inter
 ## Conclusion
 Thank you for reading about my poker project! As of 01/05/2024, the game has been completed and the AI agents are still in development. Come back soon to see updates!
 
+#### Gallery:
+<p align="center">
+ <img size="100%" src="https://github.com/saiccoumar/Poker/assets/55699636/4a3591a7-10c3-4364-a16d-face2a3cff61">
+</p>
+<p align="center">
+ <img size="100%" src="https://github.com/saiccoumar/Poker/assets/55699636/894bf6b3-a5e5-45fc-b738-bb1c19afbf5a">
+</p>
+<p align="center">
+ <img size="100%" src="https://github.com/saiccoumar/Poker/assets/55699636/1f151d6c-b726-4de7-899f-16683ad42512">
+</p>
 
