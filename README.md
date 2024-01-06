@@ -14,8 +14,6 @@ The first thing we need for a game of poker is obviously playing cards. In deck.
 ## Deck
 Now that we have cards, we need to collect them into a deck. In deck.py I created the Deck Class which is a collection of cards and has a method to populate the deck, shuffle the cards, and deal cards from the deck. I also created a combine deck function while experimenting with blackjack. 
 
-Running deck.py runs some test code I ran. It's functionally useless to do so as all we really needed was the classes Card and Deck which we'll import over into our other files. 
-
 ## Poker Simulations
 My first iteration of this project was with poker_simulations.py. You can run this for yourself using the command:
 ```
