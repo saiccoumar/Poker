@@ -50,8 +50,16 @@ The poker game has 3 subcomponents.
 Poker_host defines the class that creates an instance of TexasHoldEm. Poker_host is the second iteration built on the code used in poker_simulations.py. It contains properties for game management, ***draw_probabilities***, ***rank_hand()***, and ***determine_winner()***, as well as betting functionality. Also, it allows for game state information to be condensed into a JSON format which is extremely important for AI agents to have available to them.
 ### Server
 Server runs TexasHoldEm and manages interactions with the clients in the game as well as the round based game logic. Each client is managed by a thread that runs handle_client(). One client, designated the dealer, executes the logic for game management (similar to how one player deals cards), and thread locking is used to enforce synchronization 
+```
+# from game_src directory
+python server.py --num_players N
+```
 ### Client
 Client which allows a player to connect and play the game. Clients continuously wait for activation codes from the server, and respond when prompted to participate in the poker game. The Client also displays the game state info in the CLI as the UI for players to play the game with. 
+```
+# from game_src directory
+python client.py
+```
 
 ## Important Technical Elements
 ### Threading
