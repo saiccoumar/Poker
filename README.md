@@ -102,9 +102,21 @@ def get_game_state(self, player_num):
 Using a game state to hold information and passing it from the server to the client was essential. It allowed for batch communications rather than sending individual messages at a time and will be vital for programming AI agents. Most AI algorithms are designed with the concept of a game_state that the AI interprets and acts upon. 
 ### Object-Oriented Programming
 OOP design principles ensure that the code is extremely easy to follow and interpret. This project took me 5 separate attempts because when the design of the project started falling apart, it became increasingly difficult to detect and avoid bugs - especially with the client/socket configuration. This also ensures that when making AI agents, we'll be able to easily slot in new AI agents easily without needing to extensively rework the code base. I made this a priority after working on the Berkeley CS188 Pac-man projects in my coursework as I noticed that they took OOP principles and ran with it to abstract the actions. 
+## Agents
+Let's dive into our AI Agents!
+### Limping Agent
+```
+def make_decision(game_state):
+    return 1
+```
+This agent is our default agent. Originally, I intended to make a randomized agent the default, similar to my Tic Tac Toe agent beforehand. But I thought back to a recent game of poker I played where someone exclusively called every hand. Regardless of hand strength - even if they knew they would lose - they refused to fold or bet higher. In poker, this strategy is called limping: you "limp" through the hand and bet the minimum required to stay in the game but refuse to fold so you can see your results on the flop while risking as little as possible. 
+
+As far as poker strategies go, this is one of the worst. When you win, you win small since you never increased the pot. Your chances of a loss are higher than most other strategies where you fold weaker hands, and losing drags out the game than if everyone with weak hands had folded early. It's also the perfect control strategy! It's strategically weak, extremely easy to implement, and if bugs are thrown I know that it's not because of internal decision making logic. 
 
 ## Conclusion
 Thank you for reading about my poker project! As of 01/05/2024, the game has been completed and the AI agents are still in development. Come back soon to see updates!
+
+Update 1 (2/15/2023): Limp Agent has been added! 
 
 #### Gallery:
 <p align="center">
