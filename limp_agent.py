@@ -196,6 +196,7 @@ class LimpAgent:
 
     @staticmethod
     def make_decision(game_state):
+        # Shoutout raiden. You'd be so proud. 
         return 1
     
 
