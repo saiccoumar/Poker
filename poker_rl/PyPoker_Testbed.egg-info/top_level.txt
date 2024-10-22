@@ -1,5 +1,0 @@
-client
-deck
-limp_agent
-poker_host
-server
