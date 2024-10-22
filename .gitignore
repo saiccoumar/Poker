@@ -1,4 +1,10 @@
-poker_rl.egg-info
-poker_rl\__pycache__
-poker_rl\PyPoker_Testbed.egg-info
-poker_rl\poker_rl.egg-info
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+*.eggs/
+dist/
+build/
