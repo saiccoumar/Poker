@@ -1,7 +1,7 @@
 from collections import Counter
 import unittest
 
-from deck import *
+from poker_rl.deck import *
 
 class TestRankHand(unittest.TestCase):
     def test_royal_flush_1(self):
