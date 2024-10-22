@@ -105,6 +105,8 @@ return action, bet
 ```
 The bet value is ignored if the action is calling, checking, or folding. Exceptions will be thrown if improper input is passed in by an automated agent. 
 
+Properties of the agent class can be accessed, but all of them only provide networking information. Game chips is included but can be accessed more easily through the game state dictionary.
+
 ## Foundational Classes:
 ### Card
 The first thing we need for a game of poker is obviously playing cards. In deck.py, I created the Card class with the properties name, suit, color, and value. Name, suit, and color are all initialized by the constructor, and value is determined based on the name of the card a helper method. Card games have different value systems for different cards, so this code can be repurposed with new helper methods that fit those rules. 
