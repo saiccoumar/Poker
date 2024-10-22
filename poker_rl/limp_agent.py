@@ -126,22 +126,21 @@ class LimpAgent:
                     print(f"Current Bet: {game_state['current_bet']} |")
 
                     # Get players choice
-                    action = self.make_decision(game_state=game_state)
+                    action, bet = self.make_decision(game_state=game_state)
                     # while ((not is_int(action)) or (int(action) < 1) or (int(action) > 3)):
                     #     print("Invalid choice.")
                     #     action = self.make_decision(game_state=game_state)
                     
                     self.send_message(action)
                     # TODO: Handle when player cannot bet but tries to anyways
-                    # if int(action) == 2:
-                    #     bet = input("Enter your bet:")
+                    if int(action) == 2:
                         
-                    #     # Player cannot make bet if the bet is not a number, 
-                    #     while ((not is_int(bet)) or (int(bet) < 0) or ((int(bet) + game_state['current_bet']) > self.player.chips)):
-                    #         print("Invalid bet.")
-                    #         bet = input("Enter your bet:")
-                    #     self.player.chips -= int(bet) + game_state['current_bet']
-                    #     self.send_message(bet)
+                        # Player cannot make bet if the bet is not a number, 
+                        while ((not is_int(bet)) or (int(bet) < 0) or ((int(bet) + game_state['current_bet']) > self.player.chips)):
+                            print("Invalid bet.")
+                            raise Exception("Invalid Bet has occurred from automated bot")
+                        self.player.chips -= int(bet) + game_state['current_bet']
+                        self.send_message(bet)
 
                     # Action should always be 1
                     if int(action) == 1:
@@ -196,7 +195,7 @@ class LimpAgent:
     @staticmethod
     def make_decision(game_state):
         # Shoutout raiden. You'd be so proud. 
-        return 1
+        return 1, 0
     
 
     # Helper methods for formatting

@@ -3,7 +3,7 @@ from poker_rl import DummyAgent
 def logic(game_state):
     print(game_state)
     print("\nNah, I don't want to play this hand")
-    return 3
+    return 3, 0
 
 
 if __name__ == "__main__":
