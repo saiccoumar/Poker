@@ -1,5 +1,5 @@
 [project]
-name = "poker_rl"
+name = "poker_reinforcement_learning"
 version = "0.1.0"
 description = "Testbed for Reinforcement Learning in Poker. Implemented with Client/Socket technology."
 readme = "README.md" # Optional
@@ -70,4 +70,4 @@ build-backend= "setuptools.build_meta"
 [tool.setuptools]
 # If there are data files included in your packages that need to be
 # installed, specify them here.
-packages = ["poker_rl"]
+packages = ["poker_reinforcement_learning"]

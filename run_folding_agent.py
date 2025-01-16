@@ -1,4 +1,4 @@
-from poker_rl import DummyAgent
+from poker_reinforcement_learning import DummyAgent
 
 def logic(game_state):
     print(game_state)

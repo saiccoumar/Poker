@@ -1,6 +1,6 @@
 import argparse
 import threading
-from poker_rl import Server
+from poker_reinforcement_learning import Server
 
    
 if __name__ == "__main__":

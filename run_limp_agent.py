@@ -1,4 +1,4 @@
-from poker_rl import LimpAgent
+from poker_reinforcement_learning import LimpAgent
 
 
 
