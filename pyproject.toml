@@ -2,45 +2,25 @@
 name = "poker_reinforcement_learning"
 version = "0.1.0"
 description = "Testbed for Reinforcement Learning in Poker. Implemented with Client/Socket technology."
-readme = "README.md" # Optional
-
-# Specify which Python versions you support. In contrast to the
-# 'Programming Language' classifiers above, 'pip install' will check this
-# and refuse to install the project if the version does not match. See
-# https://packaging.python.org/guides/distributing-packages-using-setuptools/#python-requires
+readme = "README.md"
 requires-python = ">=3.11"
-
-# This is either text indicating the license for the distribution, or a file
-# that contains the license
-# https://packaging.python.org/en/latest/specifications/core-metadata/#license
 license = { file = "LICENSE.txt" }
-
-# This field adds keywords for your project which will appear on the
-# project page. What does your project relate to?
-#
-# Note that this is a list of additional keywords, separated
-# by commas, to be used to assist searching for the distribution in a
-# larger catalog.
-keywords = ["poker", "testbed", "reinforcement learning", "python", "server"]  # Optional
+keywords = ["poker", "testbed", "reinforcement learning", "python", "server"]
 authors = [
-    { name = "Sai Coumar", email = "sai.c.coumar1@gmail.com" } # Optional
+    { name = "Sai Coumar", email = "sai.c.coumar1@gmail.com" }
 ]
 maintainers = [
-    { name = "Sai Coumar", email = "sai.c.coumar1@gmail.com" } # Optional
+    { name = "Sai Coumar", email = "sai.c.coumar1@gmail.com" }
 ]
-
-# Classifiers help users find your project by categorizing it.
-# For a list of valid classifiers, see https://pypi.org/classifiers/
-classifiers = [# Optional
+classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: GNU General License",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
 ]
 
-dependencies = [
-]
+dependencies = []
 
 [project.optional-dependencies]
 test = [
@@ -52,22 +32,9 @@ test = [
 "Bug Reports" = "https://github.com/saiccoumar/Poker/issues"
 "Source" = "https://github.com/saiccoumar/Poker"
 
-# The following would provide a command line executable called `sample`
-# which executes the function `main` from this package when invoked.
-#[project.scripts]  # Optional
-#sample = "sample:main"
-
-
-
 [build-system]
-# Including torch and ninja here are needed to build the native code.
-# They will be installed as dependencies during the build, which can take a while the first time.
 requires = ["setuptools>=61.0.0", "wheel"]
-build-backend= "setuptools.build_meta"
+build-backend = "setuptools.build_meta"
 
-# This is configuration specific to the `setuptools` build backend.
-# If you are using a different build backend, you will need to change this.
 [tool.setuptools]
-# If there are data files included in your packages that need to be
-# installed, specify them here.
 packages = ["poker_reinforcement_learning"]
