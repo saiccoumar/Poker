@@ -1,6 +1,6 @@
 [project]
 name = "poker_reinforcement_learning"
-version = "0.1.4"
+version = "0.1.5"
 description = "Testbed for Reinforcement Learning in Poker. Implemented with Client/Socket technology."
 readme = "README.md"
 requires-python = ">=3.11"
